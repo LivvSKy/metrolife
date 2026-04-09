@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="icon" href="logomet.jpeg" type="image/jpeg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil Pribadi</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET & GLOBAL STYLE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Background gradasi pastel */
+    background: linear-gradient(135deg, #ffc0cb, #ffffff, #add8e6, #dda0dd);
+    overflow: hidden;
+}
+
+/* =========================
+   ANIMASI SHAPES BACKGROUND
+========================= */
+.shapes span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    opacity: 0.2;
+    animation: move 20s linear infinite;
+}
+
+/* Bentuk berbeda */
+.shapes span:nth-child(1) { background: #fff; top: 10%; left: 100%; border-radius: 50%; }
+.shapes span:nth-child(2) { background: #fff; top: 30%; left: 110%; transform: rotate(45deg); }
+.shapes span:nth-child(3) { background: #fff; top: 60%; left: 120%; border-radius: 50%; }
+.shapes span:nth-child(4) { background: #fff; top: 80%; left: 130%; }
+
+/* Animasi gerak kanan ke kiri */
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-150vw);
+    }
+}
+
+/* =========================
+   CONTAINER UTAMA
+========================= */
+.container {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   GRID PROFIL
+========================= */
+.profile {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+/* FOTO PROFIL */
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
+
+/* TEXT */
+.profile h2 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.profile p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* =========================
+   BUTTON KONTAK
+========================= */
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 500;
+    transition: 0.3s;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Hover efek */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* WARNA TOMBOL */
+.discord {
+    background: #5865F2;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.server {
+    background: #ff7a18;
+}
+
+/* ICON */
+.btn img {
+    width: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    .profile {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile img {
+        margin: auto;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- =========================
+     SHAPES BACKGROUND
+========================= -->
+<div class="shapes">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- =========================
+     CONTAINER UTAMA
+========================= -->
+<div class="container">
+
+    <!-- =========================
+         BAGIAN PROFIL
+    ========================= -->
+    <div class="profile">
+        
+        <!-- FOTO PROFIL
+             GANTI LINK DI BAWAH INI DENGAN FOTO KAMU -->
+        <img src="https://via.placeholder.com/150" alt="Foto Profil">
+
+        <div>
+            <!-- NAMA -->
+            <h2>Metrolife Roleplay</h2>
+
+            <!-- JABATAN / DESKRIPSI -->
+            <p><strong>Server San Andreas Multiplayer</strong></p>
+
+            <!-- BIO -->
+            <p>Metrolife Roleplay adalah server SAMP yang dibuat oleh Chacky dan dikembangkan oleh LivvSKy dan tim. </p>
+        </div>
+    </div>
+
+    <!-- =========================
+         TOMBOL KONTAK
+    ========================= -->
+    <div class="buttons">
+
+        <!-- DISCORD -->
+        <!-- GANTI LINK DISCORD DI BAWAH -->
+        <a href="https://discord.com/users/1350013184618004561" class="btn discord">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png">
+            Chat owner via Discord
+        </a>
+
+        <!-- WHATSAPP -->
+        <!-- GANTI NOMOR WHATSAPP -->
+        <a href="https://wa.me/6282284166448" class="btn whatsapp">
+            <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png">
+            Chat owner via WhatsApp
+        </a>
+
+        <!-- SERVER DISCORD -->
+        <!-- ISI LINK SERVER DISCORD DI SINI -->
+        <a href="https://discord.gg/mKQD8EQZVc" class="btn server">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png">
+            Server Discord MetroLife
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
